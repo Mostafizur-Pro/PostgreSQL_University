@@ -1,3 +1,5 @@
+-- Create Student table
+
 CREATE table students(
     student_id SERIAL PRIMARY KEY,
     student_name VARCHAR(255) not NULL,
@@ -20,4 +22,40 @@ VALUES
 
 SELECT * FROM students;
 
+
+-- Create Courses table
+
+CREATE Table courses(
+    course_id SERIAL PRIMARY KEY,
+    course_name VARCHAR(255) not NULL,
+    credits INT not NULL
+);
+
+INSERT INTO courses (course_name, credits) VALUES
+('Next.js', 3),
+('React.js', 4),
+('Databases', 3),
+('Prisma', 3);
+   
+
+SELECT * FROM courses;
+
+
+-- Create enrollment
+CREATE Table enrollment (
+    enrollment_id SERIAL PRIMARY KEY,
+    student_id INT,
+    course_id INT,
+ FOREIGN KEY (student_id) REFERENCES students(student_id),
+  FOREIGN KEY (course_id) REFERENCES courses(course_id)
+);
+
+INSERT into enrollment(student_id, course_id) VALUES
+(1, 1),
+(1, 2),
+(2, 1),
+(3, 2);
+
+
+SELECT * FROM enrollment;
 

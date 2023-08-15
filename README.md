@@ -8,15 +8,18 @@ A database schema in PostgreSQL defines the structure and organization of the da
 
 ## 3. Explain the primary key and foreign key concepts in PostgreSQL.
 
-## 4. A primary key in PostgreSQL uniquely identifies each record in a table and ensures data integrity.
+A primary key in PostgreSQL uniquely identifies each record in a table and ensures data integrity.
 
 A foreign key establishes a link between two tables by referencing the primary key of another table, ensuring referential integrity and enforcing relationships between tables.
-What is the difference between the VARCHAR and CHAR data types in PostgreSQL?
 
-## 5. VARCHAR: Variable-length character string that can store up to a specified length.
+## 4. What is the difference between the VARCHAR and CHAR data types in PostgreSQL?
+
+VARCHAR: Variable-length character string that can store up to a specified length.
 
 CHAR: Fixed-length character string that stores a specific number of characters, padding with spaces if necessary.
-Explain the purpose of the WHERE clause in a SELECT statement in PostgreSQL.
+
+## 5. Explain the purpose of the WHERE clause in a SELECT statement in PostgreSQL.
+
 The WHERE clause filters the rows returned by a SELECT statement based on specified conditions. It allows you to retrieve specific data that meets certain criteria.
 
 ## 6. What are the LIMIT and OFFSET clauses used for in PostgreSQL?

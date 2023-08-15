@@ -44,8 +44,9 @@ SELECT * FROM courses;
 -- Create enrollment
 CREATE Table enrollment (
     enrollment_id SERIAL PRIMARY KEY,
-    student_id INT,
-    course_id INT,
+    student_id INT not NULL,
+    course_id INT not NULL,
+    constraint fk_constraint_student&courses
  FOREIGN KEY (student_id) REFERENCES students(student_id),
   FOREIGN KEY (course_id) REFERENCES courses(course_id)
 );
@@ -56,6 +57,7 @@ INSERT into enrollment(student_id, course_id) VALUES
 (2, 1),
 (3, 2);
 
+DELETE from enrollment WHERE enrollment_id = 5;
 
 SELECT * FROM enrollment;
 

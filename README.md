@@ -1,13 +1,11 @@
 ## 1. What is PostgreSQL?
 
 PostgreSQL is an open-source relational database management system (RDBMS) known for its extensibility, robustness, and advanced features.
-
 It allows users to manage and store structured data in a secure and efficient manner.
 
 ## 2. What is the purpose of a database schema in PostgreSQL?
 
 A database schema in PostgreSQL defines the structure and organization of the database objects, such as tables, views, indexes, and functions.
-
 It provides a logical and organized way to group related database objects and define their relationships.
 
 ## 3. Explain the primary key and foreign key concepts in PostgreSQL.

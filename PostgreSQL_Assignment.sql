@@ -29,7 +29,6 @@ SELECT * FROM students;
 
 
 
-
 -- Create Courses table
 
 CREATE Table courses(
@@ -82,8 +81,8 @@ SELECT * FROM enrollment;
 
 -- SELECT students.student_name
 -- FROM students
--- INNER JOIN enrollment ON students.student_id = enrollment.student_id
--- INNER JOIN courses ON courses.course_id = enrollment.course_id
+--  JOIN enrollment ON students.student_id = enrollment.student_id
+--  JOIN courses ON courses.course_id = enrollment.course_id
 -- WHERE courses.course_name = 'Next.js';
 
 
@@ -98,13 +97,27 @@ SELECT * FROM enrollment;
 --     FROM students
 -- );
 
--- Query 4: ---------------------------------------
+-- Query 4: --------------------------------------- DONE
+
+-- DELETE FROM courses
+-- WHERE course_id NOT IN (
+--     SELECT course_id
+--     FROM enrollment
+-- );
+
+
 -- Query 5: --------------------------------------- DONE
 
 -- SELECT * from students ORDER by student_name asc limit 2 OFFSET 2;
 
 
--- Query 6: ---------------------------------------
+-- Query 6: --------------------------------------- DONE
+
+-- SELECT courses.course_name, COUNT(enrollment.student_id) AS students_enrolled
+-- FROM courses
+-- LEFT JOIN enrollment ON courses.course_id = enrollment.course_id
+-- GROUP BY courses.course_name;
+
 -- Query 7: --------------------------------------- DONE
 
 -- select avg(age) as average_age FROM students;
@@ -114,6 +127,8 @@ SELECT * FROM enrollment;
 -- Query 8: --------------------------------------- DONE
 
 -- SELECT * FROM students WHERE email like '%example.com';
+
+
 
 
 

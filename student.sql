@@ -23,6 +23,25 @@ VALUES
 SELECT * FROM students;
 
 
+
+-- SELECT student_id, student_name FROM students;
+-- SELECT * from students WHERE age > 22 and frontend_mark > 34;
+-- SELECT * from students WHERE student_name <> 'Charlie' and age > 23;
+-- SELECT * from students ORDER by student_name asc limit 2 OFFSET 2;
+-- SELECT * from students ORDER by age DESC LIMIT 1 OFFSET 3;
+
+-- SELECT * FROM students where student_id NOT IN (2, 3);
+-- SELECT * FROM students where age BETWEEN 20 and 22;
+-- SELECT * FROM students where student_name like 'A%';
+-- SELECT * FROM students where student_name like '%m';
+-- SELECT * FROM students where student_name like '_o%';
+-- SELECT * FROM students WHERE email like '%example.com';
+
+SELECT * FROM students where status is null;
+
+
+
+
 -- Create Courses table
 
 CREATE Table courses(
@@ -57,7 +76,22 @@ INSERT into enrollment(student_id, course_id) VALUES
 (2, 1),
 (3, 2);
 
-DELETE from enrollment WHERE enrollment_id = 5;
+-- DELETE from enrollment WHERE enrollment_id = 5;
 
 SELECT * FROM enrollment;
+
+
+
+
+-- Query 1:
+-- Query 2:
+-- Query 3:
+-- Query 4:
+-- Query 5:
+-- Query 6:
+-- Query 7:
+-- Query 8:
+
+-- SELECT * FROM students WHERE email like '%example.com';
+-- Query 9:
 

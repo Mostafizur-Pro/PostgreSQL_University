@@ -27,21 +27,6 @@ SELECT * FROM students;
 
 
 
--- SELECT student_id, student_name FROM students;
--- SELECT * from students WHERE age > 22 and frontend_mark > 34;
--- SELECT * from students WHERE student_name <> 'Charlie' and age > 23;
--- SELECT * from students ORDER by student_name asc limit 2 OFFSET 2;
--- SELECT * from students ORDER by age DESC LIMIT 1 OFFSET 3;
-
--- SELECT * FROM students where student_id NOT IN (2, 3);
--- SELECT * FROM students where age BETWEEN 20 and 22;
--- SELECT * FROM students where student_name like 'A%';
--- SELECT * FROM students where student_name like '%m';
--- SELECT * FROM students where student_name like '_o%';
--- SELECT * FROM students WHERE email like '%example.com';
-
--- SELECT * FROM students where status is null;
-
 
 
 
@@ -91,7 +76,7 @@ SELECT * FROM enrollment;
 -- INSERT INTO students (student_name, age, email, frontend_mark, backend_mark)
 -- VALUES    ('Alamin', 27, 'alamin@gmail.com', 55, 57);
 
--- SELECT * FROM students;
+
 
 -- Query 2: --------------------------------------- DONE
 
@@ -103,7 +88,16 @@ SELECT * FROM enrollment;
 
 
 
--- Query 3: ---------------------------------------
+-- Query 3: --------------------------------------- DONE
+
+
+-- UPDATE students
+-- SET status = 'Awarded'
+-- WHERE (frontend_mark + backend_mark) = (
+--     SELECT MAX(frontend_mark + backend_mark) 
+--     FROM students
+-- );
+
 -- Query 4: ---------------------------------------
 -- Query 5: --------------------------------------- DONE
 
@@ -111,7 +105,12 @@ SELECT * FROM enrollment;
 
 
 -- Query 6: ---------------------------------------
--- Query 7: ---------------------------------------
+-- Query 7: --------------------------------------- DONE
+
+-- select avg(age) as average_age FROM students;
+
+
+
 -- Query 8: --------------------------------------- DONE
 
 -- SELECT * FROM students WHERE email like '%example.com';

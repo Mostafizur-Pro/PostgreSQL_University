@@ -86,26 +86,35 @@ SELECT * FROM enrollment;
 
 
 
--- Query 1: ---------------------------------------
+-- Query 1: --------------------------------------- DONE
 
 -- INSERT INTO students (student_name, age, email, frontend_mark, backend_mark)
 -- VALUES    ('Alamin', 27, 'alamin@gmail.com', 55, 57);
 
 -- SELECT * FROM students;
 
--- Query 2: ---------------------------------------
+-- Query 2: --------------------------------------- DONE
+
+-- SELECT students.student_name
+-- FROM students
+-- INNER JOIN enrollment ON students.student_id = enrollment.student_id
+-- INNER JOIN courses ON courses.course_id = enrollment.course_id
+-- WHERE courses.course_name = 'Next.js';
+
+
+
 -- Query 3: ---------------------------------------
 -- Query 4: ---------------------------------------
--- Query 5: ---------------------------------------
+-- Query 5: --------------------------------------- DONE
 
 -- SELECT * from students ORDER by student_name asc limit 2 OFFSET 2;
 
 
 -- Query 6: ---------------------------------------
 -- Query 7: ---------------------------------------
--- Query 8: ---------------------------------------
+-- Query 8: --------------------------------------- DONE
 
 -- SELECT * FROM students WHERE email like '%example.com';
 
--- Query 9: ---------------------------------------
+
 

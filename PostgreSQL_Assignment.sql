@@ -1,3 +1,7 @@
+
+-- create database
+CREATE DATABASE university_db;
+
 -- Create Student table
 
 CREATE table students(
@@ -8,7 +12,6 @@ CREATE table students(
     frontend_mark INT,
     backend_mark INT,
     status VARCHAR(255)
-
 );
 
 INSERT INTO students (student_name, age, email, frontend_mark, backend_mark)
@@ -37,7 +40,7 @@ SELECT * FROM students;
 -- SELECT * FROM students where student_name like '_o%';
 -- SELECT * FROM students WHERE email like '%example.com';
 
-SELECT * FROM students where status is null;
+-- SELECT * FROM students where status is null;
 
 
 
@@ -65,7 +68,7 @@ CREATE Table enrollment (
     enrollment_id SERIAL PRIMARY KEY,
     student_id INT not NULL,
     course_id INT not NULL,
-    constraint fk_constraint_student&courses
+    constraint fk_constraint_studentandcourses
  FOREIGN KEY (student_id) REFERENCES students(student_id),
   FOREIGN KEY (course_id) REFERENCES courses(course_id)
 );
@@ -83,15 +86,26 @@ SELECT * FROM enrollment;
 
 
 
--- Query 1:
--- Query 2:
--- Query 3:
--- Query 4:
--- Query 5:
--- Query 6:
--- Query 7:
--- Query 8:
+-- Query 1: ---------------------------------------
+
+-- INSERT INTO students (student_name, age, email, frontend_mark, backend_mark)
+-- VALUES    ('Alamin', 27, 'alamin@gmail.com', 55, 57);
+
+-- SELECT * FROM students;
+
+-- Query 2: ---------------------------------------
+-- Query 3: ---------------------------------------
+-- Query 4: ---------------------------------------
+-- Query 5: ---------------------------------------
+
+-- SELECT * from students ORDER by student_name asc limit 2 OFFSET 2;
+
+
+-- Query 6: ---------------------------------------
+-- Query 7: ---------------------------------------
+-- Query 8: ---------------------------------------
 
 -- SELECT * FROM students WHERE email like '%example.com';
--- Query 9:
+
+-- Query 9: ---------------------------------------
 
